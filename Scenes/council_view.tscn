@@ -1,9 +1,18 @@
-[gd_scene format=3 uid="uid://dm1sa628r55pt"]
+[gd_scene load_steps=2 format=3 uid="uid://dm1sa628r55pt"]
+
+[ext_resource type="Texture2D" uid="uid://7qiwbigckvcb" path="res://Sprites/council_bg.png" id="1_oj0s5"]
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 240.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_oj0s5")
