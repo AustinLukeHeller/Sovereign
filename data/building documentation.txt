@@ -1,0 +1,10 @@
+id - This is an integer value that will be used in code to refer to a given building. That way, if the name or order of buildings in the file should change, the reference can remain intact.
+
+name - This is a string containing the name of the building (to be shown on screen).
+
+effect - This is a string containing the effect that the building will have in a given zone.
+	X+Y : Modifies stat X by amount Y each month.
+	X*Y : Multiplies stat X by amount Y each month.
+	
+
+is military - Boolean that identifies if a building is a military or civilian building

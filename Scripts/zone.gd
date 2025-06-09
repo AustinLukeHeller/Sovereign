@@ -11,6 +11,7 @@ enum factions {
 
 @onready var game_manager:Node2D = get_node("/root/Main/GameManager")
 @export var zone_name = "Unnamed Zone"
+@export var is_difficult_terrain = false
 
 var mapCollider:Area2D
 

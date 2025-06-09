@@ -30,5 +30,5 @@ enabled=PackedStringArray("res://addons/csv-data-importer/plugin.cfg")
 
 com.timothyqiu.godot-csv-importer={
 &"detect_numbers": true,
-&"headers": true
+&"force_float": false
 }

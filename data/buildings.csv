@@ -1,0 +1,9 @@
+id,name,effect,is military
+0,Tavern,,FALSE
+1,Guard Tower,,TRUE
+2,Market,,FALSE
+3,Garden,,FALSE
+4,Baths,,FALSE
+5,Grain Silo,,FALSE
+6,Irrigation,,FALSE
+7,Theatre,,FALSE

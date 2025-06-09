@@ -2,7 +2,7 @@
 
 importer="com.timothyqiu.godot-csv-importer"
 type="Resource"
-uid="uid://de08uoc0ym3sp"
+uid="uid://bmo7025klljye"
 path="res://.godot/imported/events.csv-e101e66d683518ffb09e45479773c121.res"
 
 [deps]
@@ -14,5 +14,5 @@ dest_files=["res://.godot/imported/events.csv-e101e66d683518ffb09e45479773c121.r
 
 delimiter=0
 headers=false
-detect_numbers=false
-force_float=true
+detect_numbers=true
+force_float=false
