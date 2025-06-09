@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://tvm3mk72tnsv"]
+[gd_scene load_steps=8 format=3 uid="uid://tvm3mk72tnsv"]
 
 [ext_resource type="Texture2D" uid="uid://7qiwbigckvcb" path="res://sprites/council_bg.png" id="1_oj0s5"]
 [ext_resource type="Script" uid="uid://f0fife26f1bo" path="res://scripts/action_manager.gd" id="2_odw32"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dpobppk88ra6r" path="res://scripts/game_manager.gd" id="4_syse4"]
 [ext_resource type="Script" uid="uid://0mh1ox7204uk" path="res://scripts/zone.gd" id="5_syse4"]
 [ext_resource type="Script" uid="uid://ce3fmu3gcopiw" path="res://scenes/upgrade_manager.gd" id="6_hxagx"]
+[ext_resource type="Script" uid="uid://b3bt1p3yi6i28" path="res://scenes/faction.gd" id="7_n22hw"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
@@ -41,3 +42,6 @@ script = ExtResource("5_syse4")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Zone/Area2D"]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="Faction" type="Node2D" parent="."]
+script = ExtResource("7_n22hw")

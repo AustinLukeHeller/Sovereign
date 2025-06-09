@@ -1,0 +1,3 @@
+﻿id,name,text,icon,priority,name1,text1,cond1,action1,name2,text2,cond2,action2,name3,text3,cond3,action3
+0,TestEvent,You must pick one of these options.,0,0,Choice 1,This is the first choice.,0,0,Choice 2,This is the second choice.,1,0,Choice 3,This is the third choice.,0,0
+1,TestEvent2,You must pick one of these options.,0,0,Choice 1,This is the first choice.,"0,1,2",0,Choice 2,This is the second choice.,1,0,Choice 3,This is the third choice.,0,0

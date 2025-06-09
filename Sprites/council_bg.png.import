@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7qiwbigckvcb"
-path="res://.godot/imported/council_bg.png-4c4770687259aeb0ad06e7f624b73f6b.ctex"
+path="res://.godot/imported/council_bg.png-b6967fc1db90f7790adedc93b4ca6036.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/council_bg.png"
-dest_files=["res://.godot/imported/council_bg.png-4c4770687259aeb0ad06e7f624b73f6b.ctex"]
+source_file="res://sprites/council_bg.png"
+dest_files=["res://.godot/imported/council_bg.png-b6967fc1db90f7790adedc93b4ca6036.ctex"]
 
 [params]
 

@@ -1,0 +1,36 @@
+This is a short set of documentation on how events are written, going field by field it explains what a field is for and how it should be formatted.
+
+id - This is an integer value that will be used in code to refer to a given event. That way, if the name or order of events in the file should change, the reference can remain intact.
+
+name - This is a string containing the name of the event (to be shown on screen).
+
+text - This is a string containing the body text of the event (to be shown on screen).
+
+icon - This is an integer value cooresponding with the image to be shown onscreen with the event.
+
+priority - This is an integer value representing how important the given event is (eg. how likely it is that the event will show up next in the queue).
+	0 : Weighted half as likely
+	1 : Basic weighting,
+	2 : Weighted twice as high as 1, but not guaranteed.
+	3 : Weighted four times as high as 1, but not guaranteed.
+	4 : Guaranteed next unless there is another 4 or a 5
+	5 : Guaranteed next unless there is another 5
+
+nameN - This is a string containing the name of the choice N (to be shown on screen).
+
+textN - This is a string containing the body text of the choice N (to be shown on screen).
+
+condN - This is a string containing the condition types that need to be met in order to select choice N. Can be seperated by commas for multiple conditions.
+	Y==X : Condition is checking if stat X is equal to Y. 
+	Y>=X : Condition is checking if stat X is greater than or equal to Y. 
+	Y<=X : Condition is checking if stat X is less than equal to Y. 
+	Y>X : Condition is checking if stat X is greater than to Y. 
+	Y<X : Condition is checking if stat X is less than to Y. 
+	Y?X : Check if upgrade X is true (1) or false (0)
+
+actionN - This is a string containing the action that will be taken when choice N is selected.
+	X=Y : Set stat X to value Y
+	X+Y : Add value Y to stat X
+	X? : Unlock the upgrade with ID X
+	X@ : Add event X to the event queue
+	X* : Remove event Y from the event queue (if it exists)
