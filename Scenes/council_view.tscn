@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://tvm3mk72tnsv"]
+[gd_scene load_steps=11 format=3 uid="uid://tvm3mk72tnsv"]
 
 [ext_resource type="Texture2D" uid="uid://7qiwbigckvcb" path="res://sprites/council_bg.png" id="1_oj0s5"]
 [ext_resource type="Script" uid="uid://f0fife26f1bo" path="res://scripts/action_manager.gd" id="2_odw32"]
@@ -7,17 +7,22 @@
 [ext_resource type="Script" uid="uid://0mh1ox7204uk" path="res://scripts/zone.gd" id="5_syse4"]
 [ext_resource type="Script" uid="uid://ce3fmu3gcopiw" path="res://scripts/upgrade_manager.gd" id="6_hxagx"]
 [ext_resource type="Script" uid="uid://c7tsmtysakypy" path="res://scripts/building_manager.gd" id="6_n22hw"]
+[ext_resource type="Texture2D" uid="uid://vxu21nd20b76" path="res://sprites/9slice2.png" id="8_yr5x5"]
+[ext_resource type="FontFile" uid="uid://cpfxr4cn102r0" path="res://fonts/MedodicaRegular.otf" id="9_g38p3"]
+
+[sub_resource type="Theme" id="Theme_ki44e"]
+default_font = ExtResource("9_g38p3")
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
 
-[node name="Control" type="Control" parent="."]
+[node name="CouncilChamber" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 240.0
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="CouncilChamber"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -45,3 +50,94 @@ script = ExtResource("5_syse4")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Zone/Area2D"]
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="EventPanel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 320.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EventBackground" type="ColorRect" parent="EventPanel"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 240.0
+color = Color(0, 0, 0, 0.407843)
+
+[node name="EventTitle" type="NinePatchRect" parent="EventPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_top = 15.0
+offset_right = 60.0
+offset_bottom = 35.0
+grow_horizontal = 2
+texture = ExtResource("8_yr5x5")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="EventTitleText" type="RichTextLabel" parent="EventPanel/EventTitle"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -10.0
+offset_right = 60.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ki44e")
+text = "Hello World"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EventText" type="NinePatchRect" parent="EventPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_top = 40.0
+offset_right = 120.0
+offset_bottom = 130.0
+grow_horizontal = 2
+texture = ExtResource("8_yr5x5")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="EventTitleText" type="RichTextLabel" parent="EventPanel/EventText"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = -42.0
+offset_right = 117.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ki44e")
+text = "This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the 188"
+scroll_active = false
+horizontal_alignment = 1
