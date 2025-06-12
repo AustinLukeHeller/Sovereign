@@ -13,7 +13,6 @@ var morals:float
 var controlled_zones = {}
 
 func _init(imported_faction_name = faction_name, imported_game_manager = get_node("/root/Main/GameManager"), starting_gold:int = 0, starting_happiness:float = 0.0, starting_tax_rate:float = 0.0, starting_magic:float = 0.0, starting_aesthetics:float = 0.0, starting_morals:float = 0.0):
-
 	self.game_manager = imported_game_manager
 	self.faction_name = imported_faction_name
 	set_stat(game_manager.stats.GOLD, starting_gold)

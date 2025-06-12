@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://757nw14qt4wh" path="res://scripts/event_manager.gd" id="3_shrwr"]
 [ext_resource type="Script" uid="uid://dpobppk88ra6r" path="res://scripts/game_manager.gd" id="4_syse4"]
 [ext_resource type="Script" uid="uid://0mh1ox7204uk" path="res://scripts/zone.gd" id="5_syse4"]
-[ext_resource type="Script" uid="uid://ce3fmu3gcopiw" path="res://scenes/upgrade_manager.gd" id="6_hxagx"]
-[ext_resource type="Script" uid="uid://c7tsmtysakypy" path="res://scenes/building_manager.gd" id="6_n22hw"]
+[ext_resource type="Script" uid="uid://ce3fmu3gcopiw" path="res://scripts/upgrade_manager.gd" id="6_hxagx"]
+[ext_resource type="Script" uid="uid://c7tsmtysakypy" path="res://scripts/building_manager.gd" id="6_n22hw"]
 
 [node name="Main" type="Node2D"]
 texture_filter = 1

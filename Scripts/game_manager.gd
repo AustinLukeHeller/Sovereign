@@ -20,7 +20,7 @@ enum stats {
 	FACTION4
 }
 
-const PLAYER_NAME:String = "Player"
+var PLAYER_NAME:String = "Player"
 const STARTING_GOLD:int = 10
 const STARTING_HAPPINESS:float = 10.0
 const STARTING_TAX_RATE:float = 0.10
