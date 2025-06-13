@@ -1,0 +1,18 @@
+extends NinePatchRect
+
+var mousing_over:bool = false
+
+func _on_mouse_entered() -> void:
+	self.modulate = Color(0.5, 0.5, 0.5, 1)
+	mousing_over = true
+
+func _on_mouse_exited() -> void:
+	self.modulate = Color(1, 1, 1, 1)
+	mousing_over = false
+
+func button_pressed():
+	self.modulate = Color(0.1, 0.1, 0.1, 1)
+
+func _input(event):
+	if event.is_action_pressed("click") and mousing_over:
+		button_pressed()

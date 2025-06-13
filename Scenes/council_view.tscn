@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://tvm3mk72tnsv"]
+[gd_scene load_steps=12 format=3 uid="uid://tvm3mk72tnsv"]
 
 [ext_resource type="Texture2D" uid="uid://7qiwbigckvcb" path="res://sprites/council_bg.png" id="1_oj0s5"]
 [ext_resource type="Script" uid="uid://f0fife26f1bo" path="res://scripts/action_manager.gd" id="2_odw32"]
@@ -8,10 +8,12 @@
 [ext_resource type="Script" uid="uid://ce3fmu3gcopiw" path="res://scripts/upgrade_manager.gd" id="6_hxagx"]
 [ext_resource type="Script" uid="uid://c7tsmtysakypy" path="res://scripts/building_manager.gd" id="6_n22hw"]
 [ext_resource type="Texture2D" uid="uid://vxu21nd20b76" path="res://sprites/9slice2.png" id="8_yr5x5"]
-[ext_resource type="FontFile" uid="uid://cpfxr4cn102r0" path="res://fonts/MedodicaRegular.otf" id="9_g38p3"]
+[ext_resource type="FontFile" uid="uid://cxv04a004gam8" path="res://fonts/yoster.ttf" id="9_g38p3"]
+[ext_resource type="Script" uid="uid://bc524o265ceop" path="res://scenes/button_script.gd" id="10_ki44e"]
 
 [sub_resource type="Theme" id="Theme_ki44e"]
 default_font = ExtResource("9_g38p3")
+default_font_size = 12
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
@@ -106,14 +108,14 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EventText" type="NinePatchRect" parent="EventPanel"]
+[node name="EventBody" type="NinePatchRect" parent="EventPanel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -120.0
+offset_left = -150.0
 offset_top = 40.0
-offset_right = 120.0
+offset_right = 150.0
 offset_bottom = 130.0
 grow_horizontal = 2
 texture = ExtResource("8_yr5x5")
@@ -124,20 +126,147 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="EventTitleText" type="RichTextLabel" parent="EventPanel/EventText"]
+[node name="EventBodyText" type="RichTextLabel" parent="EventPanel/EventBody"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -117.0
+offset_left = -147.0
 offset_top = -42.0
-offset_right = 117.0
+offset_right = 147.0
 offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_ki44e")
-text = "This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the 188"
+text = "This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event, the total character length of this textbox with this font ends up being to the size of just about the am is around 311."
 scroll_active = false
 horizontal_alignment = 1
+
+[node name="EventOption1" type="NinePatchRect" parent="EventPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 137.0
+offset_right = -60.0
+offset_bottom = 227.0
+grow_horizontal = 2
+mouse_filter = 0
+texture = ExtResource("8_yr5x5")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("10_ki44e")
+
+[node name="EventOptionText1" type="RichTextLabel" parent="EventPanel/EventOption1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -42.0
+offset_right = 42.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = SubResource("Theme_ki44e")
+text = "This is option number 1. It does nothing currently."
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EventOption2" type="NinePatchRect" parent="EventPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_top = 137.0
+offset_right = 44.0
+offset_bottom = 227.0
+grow_horizontal = 2
+mouse_filter = 0
+texture = ExtResource("8_yr5x5")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("10_ki44e")
+
+[node name="EventOptionText2" type="RichTextLabel" parent="EventPanel/EventOption2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -42.0
+offset_right = 42.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = SubResource("Theme_ki44e")
+text = "This is option number 2. It does nothing currently."
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EventOption3" type="NinePatchRect" parent="EventPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 60.0
+offset_top = 137.0
+offset_right = 150.0
+offset_bottom = 227.0
+grow_horizontal = 2
+mouse_filter = 0
+texture = ExtResource("8_yr5x5")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("10_ki44e")
+
+[node name="EventOptionText3" type="RichTextLabel" parent="EventPanel/EventOption3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -42.0
+offset_right = 42.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = SubResource("Theme_ki44e")
+text = "This is option number 3. It does nothing currently."
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="EventPanel/EventOption1" to="EventPanel/EventOption1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EventPanel/EventOption1" to="EventPanel/EventOption1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="EventPanel/EventOption2" to="EventPanel/EventOption2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EventPanel/EventOption2" to="EventPanel/EventOption2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="EventPanel/EventOption3" to="EventPanel/EventOption3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EventPanel/EventOption3" to="EventPanel/EventOption3" method="_on_mouse_exited"]
