@@ -103,6 +103,7 @@ offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_ki44e")
+bbcode_enabled = true
 text = "Hello World"
 scroll_active = false
 horizontal_alignment = 1
@@ -140,9 +141,11 @@ offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_ki44e")
+bbcode_enabled = true
 text = "This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event. This is the text for the event, the total character length of this textbox with this font ends up being to the size of just about the am is around 311."
 scroll_active = false
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="EventOption1" type="NinePatchRect" parent="EventPanel"]
 layout_mode = 1
@@ -163,6 +166,7 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 script = ExtResource("10_ki44e")
+button_num = 1
 
 [node name="EventOptionText1" type="RichTextLabel" parent="EventPanel/EventOption1"]
 layout_mode = 1
@@ -179,6 +183,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme = SubResource("Theme_ki44e")
+bbcode_enabled = true
 text = "This is option number 1. It does nothing currently."
 scroll_active = false
 horizontal_alignment = 1
@@ -203,6 +208,7 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 script = ExtResource("10_ki44e")
+button_num = 2
 
 [node name="EventOptionText2" type="RichTextLabel" parent="EventPanel/EventOption2"]
 layout_mode = 1
@@ -219,6 +225,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme = SubResource("Theme_ki44e")
+bbcode_enabled = true
 text = "This is option number 2. It does nothing currently."
 scroll_active = false
 horizontal_alignment = 1
@@ -243,6 +250,7 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 script = ExtResource("10_ki44e")
+button_num = 3
 
 [node name="EventOptionText3" type="RichTextLabel" parent="EventPanel/EventOption3"]
 layout_mode = 1
@@ -259,6 +267,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme = SubResource("Theme_ki44e")
+bbcode_enabled = true
 text = "This is option number 3. It does nothing currently."
 scroll_active = false
 horizontal_alignment = 1
