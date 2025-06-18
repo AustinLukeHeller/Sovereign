@@ -1,15 +1,26 @@
-[gd_scene load_steps=12 format=3 uid="uid://tvm3mk72tnsv"]
+[gd_scene load_steps=21 format=3 uid="uid://tvm3mk72tnsv"]
 
 [ext_resource type="Texture2D" uid="uid://7qiwbigckvcb" path="res://sprites/council_bg.png" id="1_oj0s5"]
+[ext_resource type="SpriteFrames" uid="uid://uy1y0pgaybqd" path="res://animations/window_seasons.tres" id="2_02y0s"]
 [ext_resource type="Script" uid="uid://f0fife26f1bo" path="res://scripts/action_manager.gd" id="2_odw32"]
+[ext_resource type="Texture2D" uid="uid://cufo4xknytkca" path="res://sprites/9slice3.png" id="2_yqitx"]
+[ext_resource type="FontFile" uid="uid://cpfxr4cn102r0" path="res://fonts/MedodicaRegular.otf" id="3_ecpsh"]
 [ext_resource type="Script" uid="uid://757nw14qt4wh" path="res://scripts/event_manager.gd" id="3_shrwr"]
+[ext_resource type="SpriteFrames" uid="uid://csp37wuo23nod" path="res://animations/happiness.tres" id="4_er31f"]
 [ext_resource type="Script" uid="uid://dpobppk88ra6r" path="res://scripts/game_manager.gd" id="4_syse4"]
+[ext_resource type="SpriteFrames" uid="uid://cu1hr7kdoivyx" path="res://animations/hourglass.tres" id="4_ubdok"]
+[ext_resource type="SpriteFrames" uid="uid://djq7cx5p02slo" path="res://animations/season_icons.tres" id="5_jwe3l"]
+[ext_resource type="Texture2D" uid="uid://bcm71nnm832um" path="res://sprites/coin_icon.png" id="5_pwqb7"]
 [ext_resource type="Script" uid="uid://0mh1ox7204uk" path="res://scripts/zone.gd" id="5_syse4"]
 [ext_resource type="Script" uid="uid://ce3fmu3gcopiw" path="res://scripts/upgrade_manager.gd" id="6_hxagx"]
 [ext_resource type="Script" uid="uid://c7tsmtysakypy" path="res://scripts/building_manager.gd" id="6_n22hw"]
+[ext_resource type="Script" uid="uid://cpeevo5vkky7f" path="res://scenes/time_manager.gd" id="7_ov5po"]
 [ext_resource type="Texture2D" uid="uid://vxu21nd20b76" path="res://sprites/9slice2.png" id="8_yr5x5"]
 [ext_resource type="FontFile" uid="uid://cxv04a004gam8" path="res://fonts/yoster.ttf" id="9_g38p3"]
 [ext_resource type="Script" uid="uid://bc524o265ceop" path="res://scenes/button_script.gd" id="10_ki44e"]
+
+[sub_resource type="Theme" id="Theme_ubdok"]
+default_font = ExtResource("3_ecpsh")
 
 [sub_resource type="Theme" id="Theme_ki44e"]
 default_font = ExtResource("9_g38p3")
@@ -24,11 +35,113 @@ anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 240.0
 
+[node name="Window" type="AnimatedSprite2D" parent="CouncilChamber"]
+position = Vector2(160, 120)
+sprite_frames = ExtResource("2_02y0s")
+
 [node name="TextureRect" type="TextureRect" parent="CouncilChamber"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_oj0s5")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 240.0
+
+[node name="TopBar" type="NinePatchRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -160.0
+offset_right = 160.0
+offset_bottom = 16.0
+grow_horizontal = 2
+texture = ExtResource("2_yqitx")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="HappinessIcon" type="AnimatedSprite2D" parent="UI/TopBar"]
+position = Vector2(309, 8)
+sprite_frames = ExtResource("4_er31f")
+
+[node name="GoldIcon" type="TextureRect" parent="UI/TopBar"]
+layout_mode = 0
+offset_left = 263.0
+offset_right = 279.0
+offset_bottom = 16.0
+texture = ExtResource("5_pwqb7")
+
+[node name="GoldText" type="RichTextLabel" parent="UI/TopBar"]
+offset_left = 278.0
+offset_right = 303.0
+offset_bottom = 16.0
+mouse_filter = 1
+theme = SubResource("Theme_ubdok")
+theme_override_colors/default_color = Color(0, 0, 0.286275, 1)
+bbcode_enabled = true
+text = "999"
+scroll_active = false
+vertical_alignment = 1
+
+[node name="BotBar" type="NinePatchRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -16.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_yqitx")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TimeTextWM" type="RichTextLabel" parent="UI/BotBar"]
+layout_mode = 1
+offset_left = 5.0
+offset_right = 77.0
+offset_bottom = 16.0
+mouse_filter = 1
+theme = SubResource("Theme_ubdok")
+theme_override_colors/default_color = Color(0, 0, 0.286275, 1)
+bbcode_enabled = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="TimeTextY" type="RichTextLabel" parent="UI/BotBar"]
+layout_mode = 1
+offset_left = 94.0
+offset_right = 134.0
+offset_bottom = 16.0
+mouse_filter = 1
+theme = SubResource("Theme_ubdok")
+theme_override_colors/default_color = Color(0, 0, 0.286275, 1)
+bbcode_enabled = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="HourglassIcon" type="AnimatedSprite2D" parent="UI/BotBar"]
+position = Vector2(139, 8)
+sprite_frames = ExtResource("4_ubdok")
+
+[node name="SeasonsIcon" type="AnimatedSprite2D" parent="UI/BotBar"]
+position = Vector2(85, 8)
+sprite_frames = ExtResource("5_jwe3l")
 
 [node name="ActionManager" type="Node2D" parent="."]
 script = ExtResource("2_odw32")
@@ -45,6 +158,9 @@ script = ExtResource("6_hxagx")
 [node name="BuildingManager" type="Node2D" parent="."]
 script = ExtResource("6_n22hw")
 
+[node name="TimeManager" type="Node2D" parent="."]
+script = ExtResource("7_ov5po")
+
 [node name="Zone" type="Node2D" parent="."]
 script = ExtResource("5_syse4")
 
@@ -54,6 +170,7 @@ script = ExtResource("5_syse4")
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 
 [node name="EventPanel" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -69,7 +186,7 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 320.0
 offset_bottom = 240.0
-color = Color(0, 0, 0, 0.407843)
+color = Color(0, 0, 0, 0.529412)
 
 [node name="EventTitle" type="NinePatchRect" parent="EventPanel"]
 layout_mode = 1
@@ -273,6 +390,9 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="day_tick" from="TimeManager" to="TimeManager" method="_on_day_tick"]
+[connection signal="month_tick" from="TimeManager" to="TimeManager" method="_on_month_tick"]
+[connection signal="week_tick" from="TimeManager" to="TimeManager" method="_on_week_tick"]
 [connection signal="mouse_entered" from="EventPanel/EventOption1" to="EventPanel/EventOption1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="EventPanel/EventOption1" to="EventPanel/EventOption1" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="EventPanel/EventOption2" to="EventPanel/EventOption2" method="_on_mouse_entered"]

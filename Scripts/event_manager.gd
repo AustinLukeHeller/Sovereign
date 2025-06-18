@@ -22,6 +22,7 @@ enum headers{
 
 @onready var game_manager:Node2D = get_node("/root/Main/GameManager")
 @onready var upgrade_manager:Node2D = get_node("/root/Main/UpgradeManager")
+@onready var time_manager:Node2D = get_node("/root/Main/TimeManager")
 
 @onready var event_panel:Control = get_node("/root/Main/EventPanel")
 @onready var event_title:RichTextLabel = get_node("/root/Main/EventPanel/EventTitle/EventTitleText")
@@ -61,6 +62,7 @@ func display_event(event_id:int):
 	event_option_2.text = "[color=blue]" +str(events[event_row][headers.NAME2]) + "[/color]\n" + str(events[event_row][headers.TEXT2])
 	event_option_3.text = "[color=blue]" +str(events[event_row][headers.NAME3]) + "[/color]\n" + str(events[event_row][headers.TEXT3])
 	event_panel.visible = true
+	time_manager.is_paused = true
 
 func next_event_from_queue() -> int:
 	var weighting_list:Array[int] = []
@@ -81,3 +83,4 @@ func add_to_queue(event_id:int, event_weight:int = 1):
 func choice_selection (button_num:int):
 	print("Chose option"+str(button_num))
 	event_panel.visible = false
+	time_manager.is_paused = false

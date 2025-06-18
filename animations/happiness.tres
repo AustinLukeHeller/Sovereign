@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://csp37wuo23nod"]
+
+[ext_resource type="Texture2D" uid="uid://bx25trsnwgnvx" path="res://sprites/happiness_icons.png" id="1_ly883"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_joao5"]
+atlas = ExtResource("1_ly883")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbqii"]
+atlas = ExtResource("1_ly883")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbxev"]
+atlas = ExtResource("1_ly883")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qprg8"]
+atlas = ExtResource("1_ly883")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74u4r"]
+atlas = ExtResource("1_ly883")
+region = Rect2(64, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_joao5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbqii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbxev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qprg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74u4r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

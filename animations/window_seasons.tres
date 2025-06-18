@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://uy1y0pgaybqd"]
+
+[ext_resource type="Texture2D" uid="uid://dej2vjdjgdnu0" path="res://sprites/window_seasons.png" id="1_bbgdm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp7vo"]
+atlas = ExtResource("1_bbgdm")
+region = Rect2(960, 0, 320, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x58us"]
+atlas = ExtResource("1_bbgdm")
+region = Rect2(0, 0, 320, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpwld"]
+atlas = ExtResource("1_bbgdm")
+region = Rect2(320, 0, 320, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6x0v"]
+atlas = ExtResource("1_bbgdm")
+region = Rect2(640, 0, 320, 240)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp7vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x58us")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpwld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6x0v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
