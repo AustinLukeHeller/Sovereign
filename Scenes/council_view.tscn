@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://tvm3mk72tnsv"]
+[gd_scene load_steps=22 format=3 uid="uid://tvm3mk72tnsv"]
 
 [ext_resource type="Texture2D" uid="uid://7qiwbigckvcb" path="res://sprites/council_bg.png" id="1_oj0s5"]
 [ext_resource type="SpriteFrames" uid="uid://uy1y0pgaybqd" path="res://animations/window_seasons.tres" id="2_02y0s"]
@@ -20,6 +20,9 @@
 [ext_resource type="Script" uid="uid://bc524o265ceop" path="res://scenes/button_script.gd" id="10_ki44e"]
 
 [sub_resource type="Theme" id="Theme_ubdok"]
+default_font = ExtResource("3_ecpsh")
+
+[sub_resource type="Theme" id="Theme_pwqb7"]
 default_font = ExtResource("3_ecpsh")
 
 [sub_resource type="Theme" id="Theme_ki44e"]
@@ -68,10 +71,6 @@ patch_margin_bottom = 5
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="HappinessIcon" type="AnimatedSprite2D" parent="UI/TopBar"]
-position = Vector2(309, 8)
-sprite_frames = ExtResource("4_er31f")
-
 [node name="GoldIcon" type="TextureRect" parent="UI/TopBar"]
 layout_mode = 0
 offset_left = 263.0
@@ -80,6 +79,7 @@ offset_bottom = 16.0
 texture = ExtResource("5_pwqb7")
 
 [node name="GoldText" type="RichTextLabel" parent="UI/TopBar"]
+layout_mode = 0
 offset_left = 278.0
 offset_right = 303.0
 offset_bottom = 16.0
@@ -90,6 +90,26 @@ bbcode_enabled = true
 text = "999"
 scroll_active = false
 vertical_alignment = 1
+
+[node name="HappinessTooltip" type="Control" parent="UI/TopBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 141.0
+offset_top = -8.0
+offset_right = 157.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Amount of happiness"
+theme = SubResource("Theme_pwqb7")
+
+[node name="HappinessIcon" type="AnimatedSprite2D" parent="UI/TopBar/HappinessTooltip"]
+position = Vector2(8, 8)
+sprite_frames = ExtResource("4_er31f")
 
 [node name="BotBar" type="NinePatchRect" parent="UI"]
 layout_mode = 1
